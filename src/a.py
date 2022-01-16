@@ -1,1 +1,1 @@
-success
+print('ff')
