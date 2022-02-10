@@ -6,11 +6,14 @@ import cv2
 from PIL import Image
 import torch
 import torchvision.transforms as transforms
+import numpy as np
 # 通过opencv导入图像 类型：numpy的ndarray （H，W，C=3），通道顺序（B,G,R)
 img1 = cv2.imread('D:\\Desktop\\my_CVcode\\img\\test1.jpg')
 print('img1 size:{}'.format(img1.shape))     
-# 通过image读入图像 类型：JpegImageFile   (W，H)
-img2 = Image.open('D:\\Desktop\\my_CVcode\\img\\test1.jpg')
+# 通过image读入图像 类型：JpegImageFile   (W，H)  
+img2 = Image.open('D:\\Desktop\\my_CVcode\\img\\test1.jpg')  
+# JpegImageFile 转为ndarray
+# img2 = np.asarray(img2)
 print('img2 size:{}'.format(img2.size))  
 img2.show()
 # 转为标准图像tensor（和torch.from_numpy()有区别)（H，W，C=3） 通道顺序（R,G,B)
