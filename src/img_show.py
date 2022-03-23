@@ -30,3 +30,9 @@ img_pil = transforms.ToPILImage()(img1_tensor)
 img_pil.show()
 
 #TODO:用opencv显示还原的图像tensor
+img1_np = img1_tensor.numpy()
+maxvalue = img1_np.max()
+img1_np = img_np * 255 / maxvalue
+img1_np = numpy.uint8(img1_np)
+img1_np = img1_np.transpose(1,2,0)
+cv2.imwrite('.jpg', img1_np)
