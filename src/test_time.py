@@ -1,8 +1,8 @@
 import numpy as np 
 import time
 
-from nms.nms_np import py_cpu_nms
-# from nms.nms_np_c import py_cpu_nms
+# from nms.nms_np import py_cpu_nms
+from nms.nms_np_c import py_cpu_nms
 # 生成6000个boxes
 np.random.seed( 1 )   # keep fixed
 num_rois = 6000

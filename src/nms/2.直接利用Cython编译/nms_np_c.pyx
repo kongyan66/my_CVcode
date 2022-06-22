@@ -6,7 +6,7 @@
 # --------------------------------------------------------
 # 说明来自fast rcnn源码，基本都是，太经典了呀
 
-# 版本一：纯pyhton实现，缺点性能会受到限制
+# 版本二：纯pyhton实现，cyptho进行编译生成动态库，效率稍微提升
 import numpy as np
 import matplotlib.pyplot as plt
 
